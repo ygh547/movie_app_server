@@ -1,5 +1,4 @@
 from http import HTTPStatus
-import resource
 from flask import request
 from flask_jwt_extended import get_jwt_identity, jwt_required
 from flask_restful import Resource
@@ -74,9 +73,6 @@ class MovieResource(Resource) :
         # 1. 클라이언트로부터 데이터 받아온다.
         # offset : 0 , limit : 25
 
-        offset = request.args['offset']
-        limit = request.args['limit']
-        order = request.args['order']
 
         try :
             connection = get_connection()
@@ -87,7 +83,7 @@ class MovieResource(Resource) :
                         on m.id = r.movieId
                         where m.id = %s
                         group by m.id
-                        limit '''+offset+''' , '''+limit+''';'''
+                        ;'''
             record = (movieId, )
             
             # select 문은, dictionary = True 를 해준다.
