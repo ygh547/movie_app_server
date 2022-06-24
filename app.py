@@ -34,6 +34,7 @@ api.add_resource(UserLoginResource, '/users/login')
 api.add_resource(UserLogoutResource, '/users/logout')
 api.add_resource(MovieListResource, '/movie')
 api.add_resource(MovieResource, '/movie/<int:movieId>')
+
 api.add_resource(MovieratingResource, '/movie/<int:movie_id>/rating')
 api.add_resource(MoviesearchResource, '/movie/search')
 api.add_resource(MovieRecomRealTimeResource, '/movie/recommend')

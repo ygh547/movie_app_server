@@ -71,9 +71,7 @@ class MovieListResource(Resource):
 class MovieResource(Resource) :
     def get(self, movieId) :
         # 1. 클라이언트로부터 데이터 받아온다.
-        # offset : 0 , limit : 25
-
-
+        
         try :
             connection = get_connection()
 
