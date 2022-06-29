@@ -6,9 +6,7 @@ from flask_restful import Api
 from config import Config
 from resources.movie import MovieListResource, MovieResource, MoviesearchResource 
 from resources.rating import MovieratingResource, RatingListResource
-from resources.recommend import MovieRecomRealTimeResource ,MovieRecomResource
-# from resources.follow import FollowListResource, FollowResource
-# from resources.memo import memoListResource, memoResource
+from resources.recommend import MovieRecomRealTimeResource
 from resources.user import UserLoginResource, UserLogoutResource, UserRegisterResource,jwt_blacklist
 
 
